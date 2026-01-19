@@ -2,129 +2,196 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>AKG Study Group | ₹49 Notes Subscription</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AKG Study Group | Smart GK Preparation</title>
 
 <style>
-:root{
-    --primary:#00e5ff;
-    --bg:#0b0f1a;
-    --card:#12172b;
-    --text:#e8eaf6;
-    --muted:#9aa4c7;
-    --success:#00c853;
-}
-
-*{box-sizing:border-box;}
-
+/* ================= RESET ================= */
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-    margin:0;
-    font-family:'Segoe UI',system-ui,sans-serif;
-    background:linear-gradient(180deg,#050814,#0b0f1a);
-    color:var(--text);
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#222;
+    overflow-x:hidden;
 }
 
-/* HERO */
-.hero{
-    padding:80px 20px 60px;
-    text-align:center;
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(40px)}
+    to{opacity:1;transform:translateY(0)}
 }
-.hero h1{
-    font-size:2.6rem;
+@keyframes glow{
+    0%{box-shadow:0 0 10px rgba(255,255,255,.3)}
+    50%{box-shadow:0 0 25px rgba(255,255,255,.6)}
+    100%{box-shadow:0 0 10px rgba(255,255,255,.3)}
+}
+@keyframes pulse{
+    0%{transform:scale(1)}
+    50%{transform:scale(1.05)}
+    100%{transform:scale(1)}
+}
+
+/* ================= HEADER ================= */
+header{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+    padding:20px;
+    background:linear-gradient(135deg,#ff512f,#dd2476);
+}
+header .hero{
+    animation:fadeUp 1.2s ease;
+}
+header h1{
+    font-size:38px;
     margin-bottom:10px;
 }
-.hero span{color:var(--primary);}
-.hero p{
-    max-width:600px;
-    margin:0 auto 30px;
-    color:var(--muted);
-}
-.hero button{
-    background:var(--primary);
-    border:none;
-    padding:14px 34px;
+header p{
     font-size:17px;
-    border-radius:30px;
-    cursor:pointer;
-    font-weight:600;
+    opacity:.95;
+}
+header .hero-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 35px;
+    background:#fff;
+    color:#dd2476;
+    border-radius:50px;
+    font-weight:700;
+    animation:pulse 2s infinite;
 }
 
-/* SECTIONS */
-.section{
-    padding:60px 20px;
-    max-width:1100px;
+/* ================= SECTIONS ================= */
+section{
+    padding:70px 20px;
+    max-width:1200px;
     margin:auto;
+    animation:fadeUp 1s ease;
 }
-.title{
+section h2{
     text-align:center;
-    margin-bottom:40px;
-}
-.title h2{
-    font-size:2rem;
+    font-size:30px;
+    margin-bottom:25px;
+    color:#fff;
 }
 
-/* FEATURES */
-.features{
+/* ================= ABOUT ================= */
+.about-box{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    padding:30px;
+    border-radius:20px;
+    color:#fff;
+    text-align:center;
+    line-height:1.7;
+}
+
+/* ================= CARDS ================= */
+.cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:30px;
 }
-.feature{
-    background:var(--card);
+.card{
+    background:linear-gradient(135deg,#ffffff,#f3f9ff);
+    border-radius:22px;
     padding:25px;
-    border-radius:16px;
-    border:1px solid rgba(255,255,255,.05);
+    position:relative;
+    transition:.4s;
 }
+.card:hover{
+    transform:translateY(-12px) scale(1.04);
+    animation:glow 2s infinite;
+}
+.badge{
+    position:absolute;
+    top:-14px;
+    right:-14px;
+    background:#ff1744;
+    color:#fff;
+    padding:9px 16px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:700;
+}
+.card h3{color:#dd2476}
+.old-price{
+    text-decoration:line-through;
+    color:#888;
+    font-size:14px;
+}
+.new-price{
+    font-size:32px;
+    color:#0b8043;
+    font-weight:800;
+    margin:8px 0;
+}
+.features{
+    font-size:14px;
+    line-height:1.7;
+}
+.pay-btn{
+    display:block;
+    margin-top:18px;
+    padding:14px;
+    border-radius:40px;
+    text-align:center;
+    background:linear-gradient(135deg,#36d1dc,#5b86e5);
+    color:#fff;
+    font-weight:700;
+    transition:.3s;
+}
+.pay-btn:hover{opacity:.85}
 
-/* SUBSCRIPTION CARD */
-.pricing{
+/* ================= SOCIAL ================= */
+.social{
+    background:linear-gradient(135deg,#141e30,#243b55);
+    border-radius:25px;
+    padding:40px 20px;
+}
+.social-icons{
     display:flex;
     justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
 }
-.price-card{
-    background:linear-gradient(180deg,#12172b,#0d1224);
-    padding:35px;
-    border-radius:20px;
-    width:340px;
-    text-align:center;
-    border:1px solid rgba(0,229,255,.2);
-}
-.price{
-    font-size:3rem;
-    color:var(--success);
-    margin:20px 0;
-}
-.price small{
-    font-size:1rem;
-    color:var(--muted);
-}
-.price-card ul{
-    list-style:none;
-    padding:0;
-    margin:25px 0;
-}
-.price-card li{
-    margin:10px 0;
-    color:var(--muted);
-}
-.price-card button{
-    background:var(--success);
-    border:none;
-    padding:14px;
-    width:100%;
+.social-icons a{
+    padding:12px 22px;
     border-radius:30px;
-    font-size:17px;
-    cursor:pointer;
-    font-weight:600;
+    font-weight:700;
+    background:#fff;
+    color:#243b55;
+    transition:.3s;
+}
+.social-icons a:hover{
+    transform:scale(1.1);
+    background:#36d1dc;
+    color:#fff;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
+    background:#000;
+    color:#aaa;
     text-align:center;
-    padding:30px 20px;
-    color:var(--muted);
+    padding:20px;
     font-size:14px;
-    border-top:1px solid rgba(255,255,255,.05);
+}
+
+/* ================= FLOAT BUTTON ================= */
+.float-wa{
+    position:fixed;
+    bottom:22px;
+    right:22px;
+    background:#25D366;
+    color:#fff;
+    padding:15px 20px;
+    border-radius:50px;
+    font-weight:700;
+    box-shadow:0 8px 25px rgba(0,0,0,.4);
 }
 </style>
 </head>
@@ -132,74 +199,89 @@ footer{
 <body>
 
 <!-- HERO -->
-<section class="hero">
-    <h1>AKG <span>Study Group</span></h1>
-    <p>
-        Hindi Medium students ke liye GK/GS & Current Affairs notes — 
-        exam-oriented, simple language, affordable price.
-    </p>
-    <button onclick="joinTelegram()">Join Free Telegram</button>
+<header>
+    <div class="hero">
+        <h1>📘 AKG Study Group</h1>
+        <p>Smart GK & GS Preparation for Competitive Exams</p>
+        <p>🔥 Limited Time <b>90% OFF</b> on All Subscriptions</p>
+        <a href="#plans" class="hero-btn">Start Preparation</a>
+    </div>
+</header>
+
+<!-- ABOUT -->
+<section>
+    <h2>About Us</h2>
+    <div class="about-box">
+        AKG Study Group ek trusted online platform hai jo  
+        <b>UP Police, Home Guard, SSC, Railway, Army</b>  
+        ke aspirants ke liye specially design kiya gaya hai.  
+        <br><br>
+        Daily GK/GS Quiz • PDFs • Easy Language • Budget Price
+    </div>
 </section>
 
-<!-- FEATURES -->
-<section class="section">
-    <div class="title">
-        <h2>What You Get</h2>
-    </div>
+<!-- PLANS -->
+<section id="plans">
+<h2>GK Quiz Subscription</h2>
 
+<div class="cards">
+
+<div class="card">
+    <div class="badge">90% OFF</div>
+    <h3>1 Month Plan</h3>
+    <p class="old-price">₹100</p>
+    <p class="new-price">₹10</p>
     <div class="features">
-        <div class="feature">📘 GK/GS PDF Notes</div>
-        <div class="feature">📰 Current Affairs Notes</div>
-        <div class="feature">🎯 Exam-Focused Content</div>
-        <div class="feature">📲 Telegram Access</div>
+        ✔ Daily GK & GS Quiz<br>
+        ✔ PDF + Explanation
     </div>
+    <a href="https://rzp.io/l/1monthAKG" class="pay-btn">Pay ₹10</a>
+</div>
+
+<div class="card">
+    <div class="badge">90% OFF</div>
+    <h3>6 Months Plan</h3>
+    <p class="old-price">₹490</p>
+    <p class="new-price">₹49</p>
+    <div class="features">
+        ✔ Long Term Practice<br>
+        ✔ Smart Revision
+    </div>
+    <a href="https://rzp.io/l/6monthAKG" class="pay-btn">Pay ₹49</a>
+</div>
+
+<div class="card">
+    <div class="badge">BEST VALUE</div>
+    <h3>1 Year Plan</h3>
+    <p class="old-price">₹999</p>
+    <p class="new-price">₹99</p>
+    <div class="features">
+        ✔ Full Exam Preparation<br>
+        ✔ Maximum Savings
+    </div>
+    <a href="https://rzp.io/l/1yearAKG" class="pay-btn">Pay ₹99</a>
+</div>
+
+</div>
 </section>
 
-<!-- SUBSCRIPTION -->
-<section class="section">
-    <div class="title">
-        <h2>Notes Subscription</h2>
-    </div>
-
-    <div class="pricing">
-        <div class="price-card">
-            <h3>NOTES ONLY PLAN</h3>
-            <div class="price">₹49 <small>/ month</small></div>
-
-            <ul>
-                <li>✔ GK/GS Notes</li>
-                <li>✔ Current Affairs</li>
-                <li>✔ Hindi Medium</li>
-                <li>✔ Telegram Updates</li>
-            </ul>
-
-            <button onclick="buyNotes()">Get Notes @ ₹49</button>
-        </div>
-    </div>
-</section>
-
-<!-- MOTTO -->
-<section class="section">
-    <div class="title">
-        <h2>Our Motto</h2>
-        <p style="color:var(--muted);max-width:600px;margin:auto;">
-            “Kam price mein quality content – taaki har student padh sake aur select ho sake.”
-        </p>
-    </div>
+<!-- SOCIAL -->
+<section class="social">
+<h2>Connect With Us</h2>
+<div class="social-icons">
+    <a href="https://t.me/AKGStudyGroup">Telegram</a>
+    <a href="https://wa.me/919569869194">WhatsApp</a>
+    <a href="https://youtube.com/@akgstudygroup">YouTube</a>
+    <a href="https://instagram.com/akgstudygroup">Instagram</a>
+    <a href="https://facebook.com/akgstudygroup">Facebook</a>
+</div>
 </section>
 
 <footer>
-    © 2026 AKG Study Group • Smart Study • Better Results
+© 2026 AKG Study Group • Smart Study | Smart Selection
 </footer>
 
-<script>
-function joinTelegram(){
-    window.open("https://t.me/your_telegram_link","_blank");
-}
-function buyNotes(){
-    window.location.href="https://rzp.io/i/AKGNotes49";
-}
-</script>
+<a href="https://wa.me/919569869194" class="float-wa">💬 WhatsApp</a>
 
 </body>
 </html>
