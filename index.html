@@ -3,27 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AKG Study Group | Smart GK Preparation</title>
+<title>AKG Study Group | GK • eBooks • Courses</title>
 
 <style>
-/* ================= RESET ================= */
 *{margin:0;padding:0;box-sizing:border-box}
 body{
     font-family:'Poppins',sans-serif;
     background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
     color:#222;
-    overflow-x:hidden;
 }
 
-/* ================= ANIMATIONS ================= */
+/* ANIMATION */
 @keyframes fadeUp{
     from{opacity:0;transform:translateY(40px)}
     to{opacity:1;transform:translateY(0)}
-}
-@keyframes glow{
-    0%{box-shadow:0 0 10px rgba(255,255,255,.3)}
-    50%{box-shadow:0 0 25px rgba(255,255,255,.6)}
-    100%{box-shadow:0 0 10px rgba(255,255,255,.3)}
 }
 @keyframes pulse{
     0%{transform:scale(1)}
@@ -31,40 +24,30 @@ body{
     100%{transform:scale(1)}
 }
 
-/* ================= HEADER ================= */
+/* HERO */
 header{
     min-height:90vh;
+    background:linear-gradient(135deg,#ff512f,#dd2476);
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     color:#fff;
-    padding:20px;
-    background:linear-gradient(135deg,#ff512f,#dd2476);
 }
-header .hero{
-    animation:fadeUp 1.2s ease;
-}
-header h1{
-    font-size:38px;
-    margin-bottom:10px;
-}
-header p{
-    font-size:17px;
-    opacity:.95;
-}
-header .hero-btn{
-    display:inline-block;
+.hero{animation:fadeUp 1.2s ease}
+.hero h1{font-size:38px}
+.hero-btn{
     margin-top:25px;
     padding:14px 35px;
     background:#fff;
     color:#dd2476;
     border-radius:50px;
     font-weight:700;
+    display:inline-block;
     animation:pulse 2s infinite;
 }
 
-/* ================= SECTIONS ================= */
+/* SECTION */
 section{
     padding:70px 20px;
     max-width:1200px;
@@ -73,84 +56,55 @@ section{
 }
 section h2{
     text-align:center;
+    color:#fff;
     font-size:30px;
-    margin-bottom:25px;
-    color:#fff;
+    margin-bottom:30px;
 }
 
-/* ================= ABOUT ================= */
-.about-box{
-    background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(12px);
-    padding:30px;
-    border-radius:20px;
-    color:#fff;
-    text-align:center;
-    line-height:1.7;
-}
-
-/* ================= CARDS ================= */
+/* CARDS */
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
 }
 .card{
-    background:linear-gradient(135deg,#ffffff,#f3f9ff);
+    background:#fff;
     border-radius:22px;
     padding:25px;
-    position:relative;
     transition:.4s;
 }
-.card:hover{
-    transform:translateY(-12px) scale(1.04);
-    animation:glow 2s infinite;
-}
-.badge{
-    position:absolute;
-    top:-14px;
-    right:-14px;
-    background:#ff1744;
-    color:#fff;
-    padding:9px 16px;
-    border-radius:30px;
-    font-size:13px;
-    font-weight:700;
-}
+.card:hover{transform:translateY(-10px)}
 .card h3{color:#dd2476}
-.old-price{
-    text-decoration:line-through;
-    color:#888;
-    font-size:14px;
-}
-.new-price{
-    font-size:32px;
-    color:#0b8043;
-    font-weight:800;
-    margin:8px 0;
-}
-.features{
-    font-size:14px;
-    line-height:1.7;
-}
-.pay-btn{
+.price{font-size:26px;color:#0b8043;font-weight:800}
+.old{text-decoration:line-through;color:#999;font-size:14px}
+
+.btn{
     display:block;
-    margin-top:18px;
-    padding:14px;
+    margin-top:15px;
+    padding:13px;
     border-radius:40px;
     text-align:center;
     background:linear-gradient(135deg,#36d1dc,#5b86e5);
     color:#fff;
     font-weight:700;
-    transition:.3s;
 }
-.pay-btn:hover{opacity:.85}
 
-/* ================= SOCIAL ================= */
+/* BADGE */
+.badge{
+    position:absolute;
+    margin-top:-35px;
+    margin-left:170px;
+    background:#ff1744;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+/* SOCIAL */
 .social{
     background:linear-gradient(135deg,#141e30,#243b55);
     border-radius:25px;
-    padding:40px 20px;
 }
 .social-icons{
     display:flex;
@@ -160,28 +114,19 @@ section h2{
 }
 .social-icons a{
     padding:12px 22px;
+    background:#fff;
     border-radius:30px;
     font-weight:700;
-    background:#fff;
     color:#243b55;
-    transition:.3s;
-}
-.social-icons a:hover{
-    transform:scale(1.1);
-    background:#36d1dc;
-    color:#fff;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer{
     background:#000;
     color:#aaa;
     text-align:center;
     padding:20px;
-    font-size:14px;
 }
-
-/* ================= FLOAT BUTTON ================= */
 .float-wa{
     position:fixed;
     bottom:22px;
@@ -190,8 +135,6 @@ footer{
     color:#fff;
     padding:15px 20px;
     border-radius:50px;
-    font-weight:700;
-    box-shadow:0 8px 25px rgba(0,0,0,.4);
 }
 </style>
 </head>
@@ -200,65 +143,89 @@ footer{
 
 <!-- HERO -->
 <header>
-    <div class="hero">
-        <h1>📘 AKG Study Group</h1>
-        <p>Smart GK & GS Preparation for Competitive Exams</p>
-        <p>🔥 Limited Time <b>90% OFF</b> on All Subscriptions</p>
-        <a href="#plans" class="hero-btn">Start Preparation</a>
-    </div>
+<div class="hero">
+    <h1>📘 AKG Study Group</h1>
+    <p>GK • GS • eBooks • Courses</p>
+    <p>🔥 90% OFF Limited Offer</p>
+    <a href="#subs" class="hero-btn">Start Learning</a>
+</div>
 </header>
 
-<!-- ABOUT -->
-<section>
-    <h2>About Us</h2>
-    <div class="about-box">
-       AKG Study Group is a dedicated online education platform built to support aspirants preparing for competitive government examinations across India. Our mission is to make quality education affordable, simple, and exam-focused, especially for students from Hindi and Hinglish backgrounds.
-We understand that success in exams like UP Police, Home Guard, SSC, Railway, Army, and other government jobs depends on daily practice, strong fundamentals, and smart revision. That’s why AKG Study Group focuses on GK & GS preparation through structured quizzes, concise notes, and regular practice PDFs.
-    </div>
+<!-- SUBSCRIPTION -->
+<section id="subs">
+<h2>GK Quiz Subscription</h2>
+<div class="cards">
+<div class="card">
+    <h3>1 Month</h3>
+    <p class="old">₹100</p>
+    <p class="price">₹10</p>
+    <p>Daily GK & GS Quiz + PDF</p>
+    <a href="https://rzp.io/l/1monthAKG" class="btn">Buy Now</a>
+</div>
+<div class="card">
+    <h3>6 Months</h3>
+    <p class="old">₹490</p>
+    <p class="price">₹49</p>
+    <p>Long Term Practice</p>
+    <a href="https://rzp.io/l/6monthAKG" class="btn">Buy Now</a>
+</div>
+<div class="card">
+    <h3>1 Year</h3>
+    <p class="old">₹999</p>
+    <p class="price">₹99</p>
+    <p>Complete Exam Prep</p>
+    <a href="https://rzp.io/l/1yearAKG" class="btn">Buy Now</a>
+</div>
+</div>
 </section>
 
-<!-- PLANS -->
-<section id="plans">
-<h2>GK Quiz Subscription</h2>
-
+<!-- EBOOKS -->
+<section>
+<h2>📚 eBooks & PDFs</h2>
 <div class="cards">
-
 <div class="card">
-    <div class="badge">90% OFF</div>
-    <h3>1 Month Plan</h3>
-    <p class="old-price">₹100</p>
-    <p class="new-price">₹10</p>
-    <div class="features">
-        ✔ Daily GK & GS Quiz<br>
-        ✔ PDF + Explanation
-    </div>
-    <a href="https://rzp.io/l/1monthAKG" class="pay-btn">Pay ₹10</a>
+    <h3>GK Booster PDF</h3>
+    <p class="price">₹29</p>
+    <p>Most Important GK Questions</p>
+    <a href="#" class="btn">Buy eBook</a>
 </div>
-
 <div class="card">
-    <div class="badge">90% OFF</div>
-    <h3>6 Months Plan</h3>
-    <p class="old-price">₹490</p>
-    <p class="new-price">₹49</p>
-    <div class="features">
-        ✔ Long Term Practice<br>
-        ✔ Smart Revision
-    </div>
-    <a href="https://rzp.io/l/6monthAKG" class="pay-btn">Pay ₹49</a>
+    <h3>GS Short Notes</h3>
+    <p class="price">₹49</p>
+    <p>Exam-Oriented Theory</p>
+    <a href="#" class="btn">Buy eBook</a>
 </div>
-
 <div class="card">
-    <div class="badge">BEST VALUE</div>
-    <h3>1 Year Plan</h3>
-    <p class="old-price">₹999</p>
-    <p class="new-price">₹99</p>
-    <div class="features">
-        ✔ Full Exam Preparation<br>
-        ✔ Maximum Savings
-    </div>
-    <a href="https://rzp.io/l/1yearAKG" class="pay-btn">Pay ₹99</a>
+    <h3>Current Affairs PDF</h3>
+    <p class="price">₹19</p>
+    <p>Monthly + Static CA</p>
+    <a href="#" class="btn">Buy eBook</a>
 </div>
+</div>
+</section>
 
+<!-- COURSES -->
+<section>
+<h2>🎓 Courses</h2>
+<div class="cards">
+<div class="card">
+    <h3>GK Foundation Course</h3>
+    <p class="price">₹199</p>
+    <p>Recorded Videos + PDFs</p>
+    <a href="#" class="btn">Enroll Now</a>
+</div>
+<div class="card">
+    <h3>UP Police Special</h3>
+    <p class="price">₹299</p>
+    <p>GK + GS + Practice</p>
+    <a href="#" class="btn">Enroll Now</a>
+</div>
+<div class="card">
+    <h3>Live Test Series</h3>
+    <p class="price">₹99</p>
+    <p>Weekly Live Tests</p>
+    <a href="#" class="btn">Join Course</a>
+</div>
 </div>
 </section>
 
@@ -266,20 +233,18 @@ We understand that success in exams like UP Police, Home Guard, SSC, Railway, Ar
 <section class="social">
 <h2>Connect With Us</h2>
 <div class="social-icons">
-    <a href="https://t.me/AKGStudyGroup">Telegram</a>
-    <a href="https://wa.me/919569869194">WhatsApp</a>
-    <a href="https://youtube.com/@akgstudygroup">YouTube</a>
-    <a href="https://instagram.com/akgstudygroup">Instagram</a>
-    <a href="https://facebook.com/akgstudygroup">Facebook</a>
+<a href="https://t.me/AKGStudyGroup">Telegram</a>
+<a href="https://wa.me/919569869194">WhatsApp</a>
+<a href="https://youtube.com/@akgstudygroup">YouTube</a>
+<a href="https://instagram.com/akgstudygroup">Instagram</a>
 </div>
 </section>
 
 <footer>
-© 2026 AKG Study Group • Smart Study | Smart Selection
+© 2026 AKG Study Group | Smart Study Smart Selection
 </footer>
 
 <a href="https://wa.me/919569869194" class="float-wa">💬 WhatsApp</a>
 
 </body>
 </html>
-
